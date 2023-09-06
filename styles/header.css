@@ -12,6 +12,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position:relative
+    
 }
 .container{
      display: flex;
@@ -20,10 +22,20 @@
 .container__imagem{
     padding: 1em;
     } 
-    .container__titulo{
+
+.container__titulo{
+    display: none;
+    }
+    .lista-menu{
         display: none;
-        }
-    @media screen and (min-width: 1024px){
+        position: absolute;
+        top: 100%;
+    }
+    .container  botao:checked~.lista-menu{
+        display: block;
+    }
+
+@media screen and (min-width: 1024px){
         .container__titulo{
         font-family: var(--fonte-secundaria);
         font-size: 30px;
